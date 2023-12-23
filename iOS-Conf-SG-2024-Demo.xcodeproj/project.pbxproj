@@ -14,20 +14,11 @@
 		A0EDCB822B3539DE0021F94E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0EDCB812B3539DE0021F94E /* Assets.xcassets */; };
 		A0EDCB852B3539DE0021F94E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EDCB832B3539DE0021F94E /* LaunchScreen.storyboard */; };
 		A0EDCB902B3539DE0021F94E /* iOS_Conf_SG_2024_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB8F2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoTests.swift */; };
-		A0EDCB9A2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB992B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITests.swift */; };
-		A0EDCB9C2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB9B2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITestsLaunchTests.swift */; };
 		A0EDCBAA2B355B8E0021F94E /* SwiftHook in Frameworks */ = {isa = PBXBuildFile; productRef = A0EDCBA92B355B8E0021F94E /* SwiftHook */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A0EDCB8C2B3539DE0021F94E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A0EDCB6D2B3539DD0021F94E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A0EDCB742B3539DD0021F94E;
-			remoteInfo = "iOS-Conf-SG-2024-Demo";
-		};
-		A0EDCB962B3539DE0021F94E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A0EDCB6D2B3539DD0021F94E /* Project object */;
 			proxyType = 1;
@@ -47,9 +38,6 @@
 		A0EDCB862B3539DE0021F94E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0EDCB8B2B3539DE0021F94E /* iOS-Conf-SG-2024-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-Conf-SG-2024-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EDCB8F2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Conf_SG_2024_DemoTests.swift; sourceTree = "<group>"; };
-		A0EDCB952B3539DE0021F94E /* iOS-Conf-SG-2024-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-Conf-SG-2024-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0EDCB992B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Conf_SG_2024_DemoUITests.swift; sourceTree = "<group>"; };
-		A0EDCB9B2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Conf_SG_2024_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +56,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0EDCB922B3539DE0021F94E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +64,6 @@
 			children = (
 				A0EDCB772B3539DD0021F94E /* iOS-Conf-SG-2024-Demo */,
 				A0EDCB8E2B3539DE0021F94E /* iOS-Conf-SG-2024-DemoTests */,
-				A0EDCB982B3539DE0021F94E /* iOS-Conf-SG-2024-DemoUITests */,
 				A0EDCB762B3539DD0021F94E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,7 +73,6 @@
 			children = (
 				A0EDCB752B3539DD0021F94E /* iOS-Conf-SG-2024-Demo.app */,
 				A0EDCB8B2B3539DE0021F94E /* iOS-Conf-SG-2024-DemoTests.xctest */,
-				A0EDCB952B3539DE0021F94E /* iOS-Conf-SG-2024-DemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,15 +97,6 @@
 				A0EDCB8F2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoTests.swift */,
 			);
 			path = "iOS-Conf-SG-2024-DemoTests";
-			sourceTree = "<group>";
-		};
-		A0EDCB982B3539DE0021F94E /* iOS-Conf-SG-2024-DemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A0EDCB992B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITests.swift */,
-				A0EDCB9B2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITestsLaunchTests.swift */,
-			);
-			path = "iOS-Conf-SG-2024-DemoUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,24 +140,6 @@
 			productReference = A0EDCB8B2B3539DE0021F94E /* iOS-Conf-SG-2024-DemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A0EDCB942B3539DE0021F94E /* iOS-Conf-SG-2024-DemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A0EDCBA52B3539DE0021F94E /* Build configuration list for PBXNativeTarget "iOS-Conf-SG-2024-DemoUITests" */;
-			buildPhases = (
-				A0EDCB912B3539DE0021F94E /* Sources */,
-				A0EDCB922B3539DE0021F94E /* Frameworks */,
-				A0EDCB932B3539DE0021F94E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A0EDCB972B3539DE0021F94E /* PBXTargetDependency */,
-			);
-			name = "iOS-Conf-SG-2024-DemoUITests";
-			productName = "iOS-Conf-SG-2024-DemoUITests";
-			productReference = A0EDCB952B3539DE0021F94E /* iOS-Conf-SG-2024-DemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,10 +154,6 @@
 						CreatedOnToolsVersion = 15.1;
 					};
 					A0EDCB8A2B3539DE0021F94E = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = A0EDCB742B3539DD0021F94E;
-					};
-					A0EDCB942B3539DE0021F94E = {
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = A0EDCB742B3539DD0021F94E;
 					};
@@ -229,7 +177,6 @@
 			targets = (
 				A0EDCB742B3539DD0021F94E /* iOS-Conf-SG-2024-Demo */,
 				A0EDCB8A2B3539DE0021F94E /* iOS-Conf-SG-2024-DemoTests */,
-				A0EDCB942B3539DE0021F94E /* iOS-Conf-SG-2024-DemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,13 +193,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A0EDCB892B3539DE0021F94E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0EDCB932B3539DE0021F94E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,15 +220,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0EDCB912B3539DE0021F94E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0EDCB9A2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITests.swift in Sources */,
-				A0EDCB9C2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,11 +227,6 @@
 			isa = PBXTargetDependency;
 			target = A0EDCB742B3539DD0021F94E /* iOS-Conf-SG-2024-Demo */;
 			targetProxy = A0EDCB8C2B3539DE0021F94E /* PBXContainerItemProxy */;
-		};
-		A0EDCB972B3539DE0021F94E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A0EDCB742B3539DD0021F94E /* iOS-Conf-SG-2024-Demo */;
-			targetProxy = A0EDCB962B3539DE0021F94E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -539,42 +465,6 @@
 			};
 			name = Release;
 		};
-		A0EDCBA62B3539DE0021F94E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZQ7TZ3Q272;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yanni.iOS-Conf-SG-2024-DemoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "iOS-Conf-SG-2024-Demo";
-			};
-			name = Debug;
-		};
-		A0EDCBA72B3539DE0021F94E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZQ7TZ3Q272;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yanni.iOS-Conf-SG-2024-DemoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "iOS-Conf-SG-2024-Demo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -601,15 +491,6 @@
 			buildConfigurations = (
 				A0EDCBA32B3539DE0021F94E /* Debug */,
 				A0EDCBA42B3539DE0021F94E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A0EDCBA52B3539DE0021F94E /* Build configuration list for PBXNativeTarget "iOS-Conf-SG-2024-DemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A0EDCBA62B3539DE0021F94E /* Debug */,
-				A0EDCBA72B3539DE0021F94E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
