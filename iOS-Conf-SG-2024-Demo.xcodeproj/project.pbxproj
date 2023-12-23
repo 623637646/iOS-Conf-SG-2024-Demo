@@ -16,6 +16,7 @@
 		A0EDCB902B3539DE0021F94E /* iOS_Conf_SG_2024_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB8F2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoTests.swift */; };
 		A0EDCB9A2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB992B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITests.swift */; };
 		A0EDCB9C2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB9B2B3539DE0021F94E /* iOS_Conf_SG_2024_DemoUITestsLaunchTests.swift */; };
+		A0EDCBAA2B355B8E0021F94E /* SwiftHook in Frameworks */ = {isa = PBXBuildFile; productRef = A0EDCBA92B355B8E0021F94E /* SwiftHook */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0EDCBAA2B355B8E0021F94E /* SwiftHook in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = "iOS-Conf-SG-2024-Demo";
+			packageProductDependencies = (
+				A0EDCBA92B355B8E0021F94E /* SwiftHook */,
+			);
 			productName = "iOS-Conf-SG-2024-Demo";
 			productReference = A0EDCB752B3539DD0021F94E /* iOS-Conf-SG-2024-Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = A0EDCB6C2B3539DD0021F94E;
+			packageReferences = (
+				A0EDCBA82B355B8E0021F94E /* XCRemoteSwiftPackageReference "SwiftHook" */,
+			);
 			productRefGroup = A0EDCB762B3539DD0021F94E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -607,6 +615,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0EDCBA82B355B8E0021F94E /* XCRemoteSwiftPackageReference "SwiftHook" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/623637646/SwiftHook.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0EDCBA92B355B8E0021F94E /* SwiftHook */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0EDCBA82B355B8E0021F94E /* XCRemoteSwiftPackageReference "SwiftHook" */;
+			productName = SwiftHook;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0EDCB6D2B3539DD0021F94E /* Project object */;
 }
