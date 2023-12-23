@@ -6,31 +6,55 @@
 //
 
 import XCTest
+import SwiftHook
 @testable import iOS_Conf_SG_2024_Demo
 
 final class iOS_Conf_SG_2024_DemoTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testHookBeforeAfter() throws {
+        
+        class Developer {
+            @objc dynamic func coding(featureName: String) { // The key words of methods `@objc` and `dynamic` are necessary.
+                print("codding for feature \"\(featureName)\"")
+            }
         }
+        
+        let dev = Developer()
+        
+        try hookBefore(object: dev, selector: #selector(Developer.coding)) {
+            print("open Xcode.")
+        }
+        try hookAfter(object: dev, selector: #selector(Developer.coding), closure: { obj, sel, featureName in
+            print("git commit -m \"\(featureName)\"")
+            print("close Xcode.")
+        } as @convention(block) (AnyObject, Selector, String) -> Void)
+        
+        dev.coding(featureName: "Use of ImpressionKit")
+        
     }
-
+    
+    func testHookInstead() throws {
+        class Computer {
+            @objc dynamic func sum(leftNumber: Int, rightNumber: Int) -> Int {
+                print("calculating")
+                return leftNumber + rightNumber
+            }
+        }
+        
+        let computer = Computer()
+        
+        try hookInstead(object: computer, selector: #selector(Computer.sum(leftNumber:rightNumber:)), closure: { original, obj, sel, leftNumber, rightNumber in
+            print("before calculating, leftNumber = \(leftNumber), rightNumber = \(rightNumber)")
+            let originalResult = original(obj, sel, leftNumber, rightNumber)
+            print("after calculating, got result = \(originalResult)")
+            print("hook and return 99")
+            return 99
+        } as @convention(block) ((AnyObject, Selector, Int, Int) -> Int, AnyObject, Selector, Int, Int) -> Int)
+        
+        let leftNumber = 3
+        let rightNumber = 4
+        let result = computer.sum(leftNumber: leftNumber, rightNumber: rightNumber)
+        print("\(leftNumber) + \(rightNumber) = \(result)")
+    }
+    
 }
