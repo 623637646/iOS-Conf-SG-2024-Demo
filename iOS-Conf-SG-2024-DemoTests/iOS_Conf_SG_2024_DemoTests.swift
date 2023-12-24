@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import SwiftHook
+import EasySwiftHook
 import libffi_iOS
 @testable import iOS_Conf_SG_2024_Demo
 
