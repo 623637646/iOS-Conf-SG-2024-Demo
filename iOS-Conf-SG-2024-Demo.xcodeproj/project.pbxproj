@@ -10,6 +10,7 @@
 		429699196A2F1CD79EAB8270 /* Pods_iOS_Conf_SG_2024_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9E137974F1484B40908B8C /* Pods_iOS_Conf_SG_2024_DemoTests.framework */; };
 		A08DD3152B39C1E500B96AB2 /* SwiftHookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08DD3142B39C1E500B96AB2 /* SwiftHookTests.swift */; };
 		A08DD3172B39C21100B96AB2 /* LibffiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08DD3162B39C21100B96AB2 /* LibffiTests.swift */; };
+		A0A4DC912B3B11B400EC72A0 /* MethodSwizzlingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A4DC902B3B11B400EC72A0 /* MethodSwizzlingTests.m */; };
 		A0EDCB792B3539DD0021F94E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB782B3539DD0021F94E /* AppDelegate.swift */; };
 		A0EDCB7B2B3539DD0021F94E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB7A2B3539DD0021F94E /* SceneDelegate.swift */; };
 		A0EDCB7D2B3539DD0021F94E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB7C2B3539DD0021F94E /* ViewController.swift */; };
@@ -35,6 +36,8 @@
 		8F35C09A82643BF85331D7C3 /* Pods-iOS-Conf-SG-2024-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Conf-SG-2024-DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Conf-SG-2024-DemoTests/Pods-iOS-Conf-SG-2024-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A08DD3142B39C1E500B96AB2 /* SwiftHookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHookTests.swift; sourceTree = "<group>"; };
 		A08DD3162B39C21100B96AB2 /* LibffiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibffiTests.swift; sourceTree = "<group>"; };
+		A0A4DC8F2B3B11B400EC72A0 /* iOS-Conf-SG-2024-DemoTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Conf-SG-2024-DemoTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		A0A4DC902B3B11B400EC72A0 /* MethodSwizzlingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzlingTests.m; sourceTree = "<group>"; };
 		A0EDCB752B3539DD0021F94E /* iOS-Conf-SG-2024-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Conf-SG-2024-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EDCB782B3539DD0021F94E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0EDCB7A2B3539DD0021F94E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 			children = (
 				A08DD3142B39C1E500B96AB2 /* SwiftHookTests.swift */,
 				A08DD3162B39C21100B96AB2 /* LibffiTests.swift */,
+				A0A4DC902B3B11B400EC72A0 /* MethodSwizzlingTests.m */,
+				A0A4DC8F2B3B11B400EC72A0 /* iOS-Conf-SG-2024-DemoTests-Bridging-Header.h */,
 			);
 			path = "iOS-Conf-SG-2024-DemoTests";
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 					};
 					A0EDCB8A2B3539DE0021F94E = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 						TestTargetID = A0EDCB742B3539DD0021F94E;
 					};
 				};
@@ -311,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A08DD3172B39C21100B96AB2 /* LibffiTests.swift in Sources */,
+				A0A4DC912B3B11B400EC72A0 /* MethodSwizzlingTests.m in Sources */,
 				A08DD3152B39C1E500B96AB2 /* SwiftHookTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +533,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQ7TZ3Q272;
@@ -534,6 +542,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yanni.iOS-Conf-SG-2024-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Conf-SG-2024-DemoTests/iOS-Conf-SG-2024-DemoTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Conf-SG-2024-Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOS-Conf-SG-2024-Demo";
@@ -546,6 +556,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQ7TZ3Q272;
@@ -554,6 +565,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yanni.iOS-Conf-SG-2024-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Conf-SG-2024-DemoTests/iOS-Conf-SG-2024-DemoTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Conf-SG-2024-Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOS-Conf-SG-2024-Demo";
