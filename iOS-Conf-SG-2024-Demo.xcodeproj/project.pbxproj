@@ -11,6 +11,7 @@
 		A08DD3152B39C1E500B96AB2 /* SwiftHookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08DD3142B39C1E500B96AB2 /* SwiftHookTests.swift */; };
 		A08DD3172B39C21100B96AB2 /* LibffiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08DD3162B39C21100B96AB2 /* LibffiTests.swift */; };
 		A0A4DC912B3B11B400EC72A0 /* MethodSwizzlingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A4DC902B3B11B400EC72A0 /* MethodSwizzlingTests.m */; };
+		A0B72CA52B46E6C400DC5162 /* KVOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B72CA42B46E6C400DC5162 /* KVOTests.swift */; };
 		A0EDCB792B3539DD0021F94E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB782B3539DD0021F94E /* AppDelegate.swift */; };
 		A0EDCB7B2B3539DD0021F94E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB7A2B3539DD0021F94E /* SceneDelegate.swift */; };
 		A0EDCB7D2B3539DD0021F94E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDCB7C2B3539DD0021F94E /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		A08DD3162B39C21100B96AB2 /* LibffiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibffiTests.swift; sourceTree = "<group>"; };
 		A0A4DC8F2B3B11B400EC72A0 /* iOS-Conf-SG-2024-DemoTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Conf-SG-2024-DemoTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0A4DC902B3B11B400EC72A0 /* MethodSwizzlingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzlingTests.m; sourceTree = "<group>"; };
+		A0B72CA42B46E6C400DC5162 /* KVOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOTests.swift; sourceTree = "<group>"; };
 		A0EDCB752B3539DD0021F94E /* iOS-Conf-SG-2024-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Conf-SG-2024-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EDCB782B3539DD0021F94E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0EDCB7A2B3539DD0021F94E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				A08DD3142B39C1E500B96AB2 /* SwiftHookTests.swift */,
 				A08DD3162B39C21100B96AB2 /* LibffiTests.swift */,
 				A0A4DC902B3B11B400EC72A0 /* MethodSwizzlingTests.m */,
+				A0B72CA42B46E6C400DC5162 /* KVOTests.swift */,
 				A0A4DC8F2B3B11B400EC72A0 /* iOS-Conf-SG-2024-DemoTests-Bridging-Header.h */,
 			);
 			path = "iOS-Conf-SG-2024-DemoTests";
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B72CA52B46E6C400DC5162 /* KVOTests.swift in Sources */,
 				A08DD3172B39C21100B96AB2 /* LibffiTests.swift in Sources */,
 				A0A4DC912B3B11B400EC72A0 /* MethodSwizzlingTests.m in Sources */,
 				A08DD3152B39C1E500B96AB2 /* SwiftHookTests.swift in Sources */,
