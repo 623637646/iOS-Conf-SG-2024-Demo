@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "libffi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/623637646/libffi.git",
+      "state" : {
+        "revision" : "49262342875a73bea1d3b69824fa87dd89d8ad04",
+        "version" : "3.4.4"
+      }
+    },
+    {
+      "identity" : "swifthook",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/623637646/SwiftHook.git",
+      "state" : {
+        "revision" : "08838c7b56a5a645ffd73d8e4a5bee1941f213c4",
+        "version" : "3.5.1"
+      }
+    }
+  ],
+  "version" : 2
+}

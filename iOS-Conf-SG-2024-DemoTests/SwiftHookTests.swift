@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import EasySwiftHook
+import SwiftHook
 
 final class SwiftHookTests: XCTestCase {
     
