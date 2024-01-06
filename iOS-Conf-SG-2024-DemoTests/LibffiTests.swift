@@ -12,7 +12,7 @@ final class LibffiTests: XCTestCase {
     
     static let targetFuntion = {
         print("Target function is called")
-    } as @convention(c) () -> Void
+    } as @convention(c) () -> Void  // Using `@convention(c)` to declare a function pointer to a C function
     
     func testFFICall() {
         
@@ -21,9 +21,10 @@ final class LibffiTests: XCTestCase {
             guard (ffi_prep_cif(
                 cifPointer,
                 FFI_DEFAULT_ABI,
-                UInt32(0),
-                UnsafeMutablePointer(&ffi_type_void),
-                nil)) == FFI_OK else {
+                UInt32(0), // Number of parameters, no parameter in this case
+                UnsafeMutablePointer(&ffi_type_void), // Return type, It's void in this case
+                nil // Description of all parameters, nil in this case
+            )) == FFI_OK else {
                 assertionFailure()
                 return
             }

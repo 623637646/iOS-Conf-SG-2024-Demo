@@ -9,34 +9,21 @@
 @import ObjectiveC.runtime;
 
 @interface MyObject : NSObject
-
-- (void)test;
-
 @end
 
 @implementation MyObject
-
 - (void)test
 {
-    NSLog(@"test method is called, _cmd is %@", NSStringFromSelector(_cmd));
+    NSLog(@"Executing `test`, _cmd is %@", NSStringFromSelector(_cmd));
 }
-
-@end
-
-@interface MyObject (Swizzling)
-
-- (void)swizzling_test;
-
 @end
 
 @implementation MyObject (Swizzling)
-
 - (void)swizzling_test
 {
-    NSLog(@"swizzling_test method is called, _cmd is %@", NSStringFromSelector(_cmd));
+    NSLog(@"Executing `swizzling_test`, _cmd is %@", NSStringFromSelector(_cmd));
     [self swizzling_test];
 }
-
 @end
 
 @interface MethodSwizzlingTests : XCTestCase
@@ -45,7 +32,18 @@
 
 @implementation MethodSwizzlingTests
 
-+ (void)load {
+- (void)testNormal {
+    MyObject *obj = [[MyObject alloc] init];
+    [obj test];
+}
+
+- (void)testWrongCMD {
+    [MethodSwizzlingTests swizzle];
+    MyObject *obj = [[MyObject alloc] init];
+    [obj test];
+}
+
++ (void)swizzle {
     static dispatch_once_t once_token;
     dispatch_once(&once_token,  ^{
         SEL testSelector = @selector(test);
@@ -56,10 +54,41 @@
     });
 }
 
+@end
 
-- (void)testWrongCMD {
-    MyObject *obj = [[MyObject alloc] init];
-    [obj test];
+
+@interface MyObject (AssociatedObjects)
+@property (nonatomic, copy) NSString *bad;
+@property (nonatomic, copy) NSString *good;
+@end
+
+@implementation MyObject (AssociatedObjects)
+
+// MARK: Bad code
+
+- (void)setBad:(NSString *)bad
+{
+    objc_setAssociatedObject(self, @selector(bad), bad, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSString *)bad
+{
+    // `_cmd` may be wrong after method swizzling.
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+// MARK: Good code
+
+static char kAssociatedObjectKey;
+
+- (void)setGood:(NSString *)good
+{
+    objc_setAssociatedObject(self, &kAssociatedObjectKey, good, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSString *)good
+{
+    return objc_getAssociatedObject(self, &kAssociatedObjectKey);
 }
 
 @end

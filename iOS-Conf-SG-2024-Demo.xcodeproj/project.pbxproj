@@ -114,9 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				A08DD3142B39C1E500B96AB2 /* SwiftHookTests.swift */,
-				A08DD3162B39C21100B96AB2 /* LibffiTests.swift */,
 				A0A4DC902B3B11B400EC72A0 /* MethodSwizzlingTests.m */,
 				A0B72CA42B46E6C400DC5162 /* KVOTests.swift */,
+				A08DD3162B39C21100B96AB2 /* LibffiTests.swift */,
 				A0A4DC8F2B3B11B400EC72A0 /* iOS-Conf-SG-2024-DemoTests-Bridging-Header.h */,
 			);
 			path = "iOS-Conf-SG-2024-DemoTests";
