@@ -76,8 +76,8 @@ final class SwiftHookTests: XCTestCase {
             return number * 3
         } as @convention(block) (
             (AnyObject, Selector, Int) -> Int,  // original method block
-            AnyObject, // `math` Instance
-            Selector, // `sum` Selector
+            AnyObject, // `math` instance
+            Selector, // `double` method Selector
             Int // number
         ) -> Int // return value
         )
