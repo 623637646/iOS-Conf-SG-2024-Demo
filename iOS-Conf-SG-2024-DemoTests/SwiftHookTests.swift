@@ -59,19 +59,23 @@ final class SwiftHookTests: XCTestCase {
     func testHookInsteadForSpecifiedInstance() throws {
         
         class TestObject {
+            // Use `@objc` to make this method accessible from Objective-C
+            // Using `dynamic` tells Swift to always refer to Objective-C dynamic dispatch
             @objc dynamic func testMethod() -> String {
                 return "ABC"
             }
         }
         
         let obj = TestObject()
-        
+                
         try hookInstead(object: obj, selector: #selector(TestObject.testMethod), closure: { original, obj, sel in
-            let originalResult = original(obj, sel)
+            // Before executing testMethod
+            let originalResult = original(obj, sel) // call original method
+            // After executing testMethod
             print("Original result is \(originalResult)")
             return "123"
-        } as @convention(block) (
-            (AnyObject, Selector) -> String,  // original method block
+        } as @convention(block) ( // Using `@convention(block)` to declares a Swift closure as an Objective-C block
+            (AnyObject, Selector) -> String,  // original method closure
             AnyObject, // `obj` Instance
             Selector // `testMethod` Selector
         ) -> String // return value
