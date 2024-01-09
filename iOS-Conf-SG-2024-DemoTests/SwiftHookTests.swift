@@ -58,33 +58,27 @@ final class SwiftHookTests: XCTestCase {
     // Totally override a mehtod for specified instance.
     func testHookInsteadForSpecifiedInstance() throws {
         
-        class Math {
-            @objc dynamic func double(_ number: Int) -> Int {
-                let result = number * 2
-                print("Executing `double` with \(number), result is \(result)")
-                return result
+        class TestObject {
+            @objc dynamic func testMethod() -> String {
+                return "ABC"
             }
         }
         
-        let math = Math()
+        let obj = TestObject()
         
-        try hookInstead(object: math, selector: #selector(Math.double(_:)), closure: { original, obj, sel, number in
-            print("Before executing `double`")
-            let originalResult = original(obj, sel, number)
-            print("After executing `double`, got result \(originalResult)")
-            print("Triple the number!")
-            return number * 3
+        try hookInstead(object: obj, selector: #selector(TestObject.testMethod), closure: { original, obj, sel in
+            let originalResult = original(obj, sel)
+            print("Original result is \(originalResult)")
+            return "123"
         } as @convention(block) (
-            (AnyObject, Selector, Int) -> Int,  // original method block
-            AnyObject, // `math` instance
-            Selector, // `double` method Selector
-            Int // number
-        ) -> Int // return value
+            (AnyObject, Selector) -> String,  // original method block
+            AnyObject, // `obj` Instance
+            Selector // `testMethod` Selector
+        ) -> String // return value
         )
         
-        let number = 3
-        let result = math.double(number)
-        print("Double \(number), got \(result)")
+        let result = obj.testMethod()
+        print("Hooked result is \(result)")
     }
     
     // Call a hook closure before executing a method for all instances of a class.
